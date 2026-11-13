@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leave a Light On: Suicide Prevention Awareness</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Young+Serif&display=swap">
+<style>
+:root{--bg:#fff;--surface:#f6f6f6;--ink:#1a1a1a;--muted:#555;--teal:#d90000;--lamp:#d90000;--lampink:#fff;--night:#1f1f1f;--line:#e3e3e3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#151515;--surface:#222;--ink:#f5f5f5;--muted:#bbb;--teal:#ff4538;--lamp:#ff3b30;--lampink:#140000;--line:#3a3a3a;--night:#0a0a0a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#151515;--surface:#222;--ink:#f5f5f5;--muted:#bbb;--teal:#ff4538;--lamp:#ff3b30;--lampink:#140000;--line:#3a3a3a;--night:#0a0a0a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15;margin:0 0 .5em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem)}h3{font-size:1.3rem}
+a{color:var(--teal)}a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--lamp);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.crisis{background:#111;color:#fff;text-align:center;padding:10px 16px;font-weight:600;font-size:.97rem}
+.crisis a{color:#fff}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px 18px;align-items:center;overflow-x:auto;padding-top:10px;padding-bottom:10px;white-space:nowrap}
+nav b{font-family:"Young Serif",serif;font-weight:400;margin-right:auto}
+nav a{text-decoration:none;color:var(--ink);font-size:.95rem}nav a:hover{color:var(--teal);text-decoration:underline}
+.hero{background:var(--bg);color:var(--ink);padding:64px 0 56px;border-bottom:6px solid var(--lamp)}
+.hero h1{font-size:clamp(2.6rem,9vw,5.2rem);letter-spacing:-.01em;margin-bottom:.3em}
+.hero p{max-width:34em;font-size:1.2rem;color:var(--muted)}.hero p.refrain{font-family:"Young Serif",Georgia,serif;font-size:clamp(1.4rem,4vw,2rem);color:var(--teal);margin:0 0 .6em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--lamp);color:var(--lampink)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.windows{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;max-width:420px;margin-top:40px}
+.windows i{aspect-ratio:3/4;background:var(--line);border-radius:3px}
+.windows i.on{background:var(--lamp);box-shadow:0 0 26px 6px rgba(217,0,0,.4);animation:glow 3.5s ease-in-out infinite alternate}
+@keyframes glow{to{box-shadow:0 0 38px 10px rgba(217,0,0,.55)}}
+@media (prefers-reduced-motion:reduce){.windows i.on{animation:none}html{scroll-behavior:auto}}
+section{padding:60px 0}section+section{border-top:1px solid var(--line)}
+.lede{max-width:40em;color:var(--muted);font-size:1.12rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:28px}
+.stat{border-left:4px solid var(--lamp);padding:4px 0 4px 16px}.stat strong{display:block;font-family:"Young Serif",serif;font-size:1.5rem;font-weight:400}
+.src{font-size:.88rem;color:var(--muted);margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card ul{margin:.4em 0 0;padding-left:1.2em}.card li{margin:.3em 0}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:12px 0}
+summary{cursor:pointer;padding:16px 20px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--teal)}details[open] summary::after{content:"\2212"}
+details>div{padding:0 20px 18px;color:var(--ink)}
+.v{font-weight:700}.v.m{color:var(--teal)}.v.f{color:var(--ink);text-decoration:underline;text-decoration-color:var(--lamp);text-decoration-thickness:3px;text-underline-offset:3px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:26px 0 0;display:grid;gap:16px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.steps li::before{content:counter(s);width:42px;height:42px;border-radius:50%;background:var(--lamp);color:var(--lampink);display:grid;place-items:center;font-family:"Young Serif",serif;font-size:1.2rem}
+.steps b{display:block;font-size:1.12rem}
+.say{background:var(--night);color:#f2f5f3;border-radius:14px;padding:26px;margin-top:26px}
+.say h3{color:#f2f5f3}.say .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.say ul{padding-left:1.1em;margin:0}.say li{margin:.4em 0}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
+.res .card b{font-size:1.15rem}
+.big{font-family:"Young Serif",serif;font-size:1.7rem;color:var(--teal);display:block;margin:.2em 0}
+.pledge button{font:inherit;font-weight:700;padding:12px 20px;border-radius:999px;border:2px solid var(--teal);background:transparent;color:var(--teal);cursor:pointer;margin:6px 8px 6px 0}
+.pledge button[aria-pressed="true"]{background:var(--teal);color:var(--bg)}
+#pmsg{min-height:1.6em;font-weight:600;margin-top:10px}
+.swap .old{display:block;color:var(--muted)}.swap .old s{text-decoration-color:var(--lamp)}.swap .new{display:block;font-family:"Young Serif",Georgia,serif;font-size:1.25rem;color:var(--teal);margin:.3em 0 .5em}.swap p{margin:0;font-size:.95rem;color:var(--muted)}
+.share{background:var(--lamp);color:var(--lampink);border-radius:14px;padding:34px 26px;max-width:460px;margin:26px 0 12px}.share .sq{font-family:"Young Serif",Georgia,serif;font-size:clamp(2rem,7vw,3rem);line-height:1.1;margin:0 0 .4em}.share p{margin:0}
+footer{background:var(--night);color:#f2f2f2;padding:40px 0;font-size:.95rem}footer a{color:#ffb3ad}
+</style>
+</head>
+<body>
+<div class="crisis" role="region" aria-label="Crisis support">If you or someone you know is in crisis, call or text <a href="tel:988">988</a> (US) any time. If someone is in immediate danger, call 911.</div>
+<nav aria-label="Main"><div class="wrap"><b>Leave a Light On</b><a href="#why">Why it matters</a><a href="#signs">Warning signs</a><a href="#myths">Myth or fact?</a><a href="#help">How to help</a><a href="#words">Words that help</a><a href="#help-now">Get help</a><a href="#act">Take action</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="refrain">Who’s leaving a light on for you?</p>
+<h1>Ask. Listen. Stay.</h1>
+<p>Suicide is preventable. One honest conversation, one steady presence, one person who notices can change the direction of someone’s night. You don’t need to be an expert. You need to show up.</p>
+<div class="btns"><a class="btn" href="#help">Learn how to help</a><a class="btn alt" href="#help-now">I need support now</a></div>
+<div class="windows" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div></header>
+
+<main>
+<section id="why"><div class="wrap">
+<h2>Why we leave a light on</h2>
+<p class="lede">Behind every number is a person who was loved, and people left behind who are still asking what they could have done. Silence and shame keep pain hidden. Talking about it openly is one of the most protective things a community can do.</p>
+<div class="stats">
+<div class="stat"><strong>Around 49,000</strong>people in the US died by suicide in 2022, according to the CDC.</div>
+<div class="stat"><strong>Ages 10 to 34</strong>Suicide is among the leading causes of death for young people in the US.</div>
+<div class="stat"><strong>Far more think about it</strong>Many more people have serious thoughts of suicide than ever attempt, and most who get support go on to live full lives.</div>
+</div>
+<p class="src">Figures from the CDC and the National Institute of Mental Health. Check cdc.gov/suicide for the latest data.</p>
+</div></section>
+
+<section id="signs"><div class="wrap">
+<h2>Notice when a light goes out</h2>
+<p class="lede">Signs are not always dramatic. Look for changes from a person’s usual self, especially new, sudden, or growing ones.</p>
+<div class="grid">
+<div class="card"><h3>What they say</h3><ul><li>Talking about wanting to die or having no reason to live</li><li>Feeling trapped or like a burden to others</li><li>Unbearable pain, emotional or physical</li><li>Saying goodbye in unusual ways</li></ul></div>
+<div class="card"><h3>What they do</h3><ul><li>Pulling away from friends, class, or activities</li><li>Giving away things that matter to them</li><li>Big changes in sleep or eating</li><li>Increased alcohol or drug use</li><li>Searching for ways to end their life</li></ul></div>
+<div class="card"><h3>How they seem</h3><ul><li>Hopelessness or deep despair</li><li>Rage, agitation, or reckless behavior</li><li>Sudden calm after a long low period</li><li>Extreme mood swings</li></ul></div>
+</div>
+<p class="src">Risk is higher after a loss, a breakup, a failure, bullying, a major life change, or when someone feels alone in a new place. If you see these signs, act, even if you’re not sure.</p>
+</div></section>
+
+<section id="myths"><div class="wrap">
+<h2>Myth or fact?</h2>
+<p class="lede">Tap a statement to find out. Misunderstandings about suicide, mental health, and asking for help are part of what keeps people silent.</p>
+<details><summary><span>“Asking someone about suicide plants the idea.”</span></summary><div><b class="v m">Myth:</b> Research shows asking directly does not increase risk. It often brings relief, because the person finally gets to say what they’ve been carrying.</div></details>
+<details><summary><span>“People who talk about suicide are just seeking attention.”</span></summary><div><b class="v m">Myth:</b> Treat every mention as real. Someone who reaches out, even indirectly, is asking for connection. Responding is never an overreaction.</div></details>
+<details><summary><span>“Suicidal crises are often temporary.”</span></summary><div><b class="v f">Fact:</b> With support, safety planning, and treatment, most people recover and find reasons to live. Getting through the worst moment matters.</div></details>
+<details><summary><span>“Only people with a mental illness think about suicide.”</span></summary><div><b class="v m">Myth:</b> Mental health conditions are a major factor, but suicidal thoughts can come from overwhelming stress, grief, isolation, or pain, in anyone.</div></details>
+<details><summary><span>“Suicide happens without any warning.”</span></summary><div><b class="v m">Myth:</b> Many people show warning signs in what they say, do, or how they seem, even if the signs are easy to miss. Learning them gives you a chance to act.</div></details>
+<details><summary><span>“Suicide is selfish.”</span></summary><div><b class="v m">Myth:</b> People in crisis are usually in unbearable pain that narrows their thinking until they can’t see other options. Many believe others would be better off, which is a symptom of the pain, not a lack of care.</div></details>
+<details><summary><span>“Going to therapy means you’re weak.”</span></summary><div><b class="v m">Myth:</b> Getting help takes courage and strength. Counseling is a skill-building tool, the same way a coach or trainer is, and millions of people use it, including many students and athletes.</div></details>
+<details><summary><span>“Strong people don’t struggle.”</span></summary><div><b class="v m">Myth:</b> Anyone can hit a breaking point, whatever their age, background, or grades, or how together they look. People who seem fine often hide pain the most. Strength includes admitting you need support.</div></details>
+<details><summary><span>“If I tell someone, I’ll just be a burden.”</span></summary><div><b class="v m">Myth:</b> Most people who care about you would rather know. Feeling like a burden is a common symptom of pain, not the truth. Reaching out gives others a chance to show up.</div></details>
+<details><summary><span>“You don’t have to be a professional to help.”</span></summary><div><b class="v f">Fact:</b> Friends, roommates, classmates, and family are often the first to notice. Asking, listening, and helping someone connect to care are things anyone can do.</div></details>
+<details><summary><span>“Once someone seems better, the danger is over.”</span></summary><div><b class="v m">Myth:</b> Risk can continue after a crisis eases, especially in the weeks after a hospital stay or an attempt. Keep checking in, even when things look calmer.</div></details>
+<details><summary><span>“Most people who survive an attempt do not go on to die by suicide.”</span></summary><div><b class="v f">Fact:</b> Support, treatment, and connection in the time that follows make a real difference. Follow-up care matters, because risk can stay higher for a while.</div></details>
+<details><summary><span>“It’s just a bad mood. It will pass on its own.”</span></summary><div><b class="v m">Myth:</b> A bad day passes. Depression, anxiety, or hopelessness that lasts for weeks or keeps getting worse is a health issue that responds to treatment. Don’t wait it out alone.</div></details>
+<details><summary><span>“Talking about suicide with care can save lives.”</span></summary><div><b class="v f">Fact:</b> Careful, hopeful conversation protects people. What hurts is silence and stigma. We say “died by suicide,” not “committed suicide,” because suicide is not a crime.</div></details>
+</div></section>
+
+<section id="help"><div class="wrap">
+<h2>How to leave a light on for someone</h2>
+<p class="lede">These five steps come from research-backed guidance from the National Institute of Mental Health and the 988 Lifeline. Doing any one of them matters.</p>
+<ol class="steps">
+<li><div><b>Ask</b>Say it plainly and kindly: “Are you thinking about suicide?” Direct words show you can handle the answer.</div></li>
+<li><div><b>Keep them safe</b>If they have a plan or the means, help reduce access to anything dangerous, and don’t leave them alone. Call 988 or 911 if the danger is immediate.</div></li>
+<li><div><b>Be there</b>Listen without judging or fixing. Let them talk. Your calm attention says “you matter.”</div></li>
+<li><div><b>Help them connect</b>Offer to sit with them while they call or text 988, or to walk with them to a counselor, doctor, or campus counseling center.</div></li>
+<li><div><b>Follow up</b>Check in the next day, then the next week. Staying in touch lowers risk and shows the connection is real.</div></li>
+</ol>
+<div class="say"><h3>What to say, and what to avoid</h3><div class="cols">
+<div><b>Try</b><ul><li>“I’m worried about you. Can we talk?”</li><li>“That sounds really painful. I’m glad you told me.”</li><li>“You’re not alone. I’m staying right here.”</li></ul></div>
+<div><b>Avoid</b><ul><li>“You have so much to live for.”</li><li>“Think of how this would hurt others.”</li><li>Promising to keep it a secret. Safety comes first.</li></ul></div>
+</div></div>
+</div></section>
+
+<section id="words"><div class="wrap">
+<h2>Words that help</h2>
+<p class="lede">The words we choose can make someone feel judged or held. Small swaps matter.</p>
+<div class="grid">
+<div class="card swap"><span class="old">Instead of <s>“committed suicide”</s></span><span class="new">say “died by suicide”</span><p>Suicide is not a crime, and “committed” suggests it is.</p></div>
+<div class="card swap"><span class="old">Instead of <s>“a failed attempt”</s></span><span class="new">say “survived an attempt”</span><p>Surviving is not failing. This wording protects dignity.</p></div>
+<div class="card swap"><span class="old">Instead of <s>“You’re being dramatic”</s></span><span class="new">say “I can see how much pain you’re in”</span><p>Name the pain. Don’t weigh it.</p></div>
+<div class="card swap"><span class="old">Instead of <s>“Just think positive”</s></span><span class="new">say “I’m not going anywhere. Tell me more.”</span><p>Presence works better than a pep talk.</p></div>
+<div class="card swap"><span class="old">Instead of <s>“Why would you do that?”</s></span><span class="new">say “What’s made things feel unbearable?”</span><p>“Why” questions can sound like blame. “What” invites a story.</p></div>
+<div class="card swap"><span class="old">Instead of <s>“I know exactly how you feel”</s></span><span class="new">say “I can’t fully know, but I want to understand”</span><p>Honesty builds more trust than false certainty.</p></div>
+</div>
+<div class="card" style="margin-top:18px"><h3>Ways to start the conversation</h3><ul><li>“I’ve noticed you seem down lately. How are you, really?”</li><li>“You don’t have to explain. I’m here.”</li><li>“Would it help to talk, or just to sit together?”</li></ul></div>
+</div></section>
+
+<section id="help-now"><div class="wrap">
+<h2>Get help now</h2>
+<p class="lede">If you’re struggling, you deserve support. These services are free, confidential, and open all day, every day.</p>
+<div class="res">
+<div class="card"><b>988 Suicide &amp; Crisis Lifeline</b><span class="big">Call or text 988</span>Chat online at <a href="https://988lifeline.org">988lifeline.org</a>. Veterans can press 1. Spanish is available.</div>
+<div class="card"><b>Crisis Text Line</b><span class="big">Text HOME to 741741</span>Free support by text with a trained crisis counselor.</div>
+<div class="card"><b>The Trevor Project</b><span class="big">Text START to 678-678</span>Support for LGBTQ+ young people. Call 1-866-488-7386 or visit <a href="https://thetrevorproject.org">thetrevorproject.org</a>.</div>
+<div class="card"><b>On campus</b><span class="big">Counseling center</span>Most colleges offer free or low-cost counseling. Search your school’s website for “counseling services.”</div>
+<div class="card"><b>Immediate danger</b><span class="big">Call 911</span>Or go to the nearest emergency room. Stay with the person until help arrives.</div>
+<div class="card"><b>Outside the US</b><span class="big">findahelpline.com</span>Find a free helpline in your country.</div>
+</div>
+</div></section>
+
+<section id="act" class="pledge"><div class="wrap">
+<h2>Leave a light on this week</h2>
+<p class="lede">Prevention is a community habit. Choose what you will do this week.</p>
+<div id="pbtns">
+<button type="button" aria-pressed="false" data-m="Save 988 in your phone now. You may be the person who needs it for someone else.">Save 988 in my phone</button>
+<button type="button" aria-pressed="false" data-m="Text one person today: “Thinking of you. How are you really doing?”">Check in with a friend</button>
+<button type="button" aria-pressed="false" data-m="Send this site to a group chat, a roommate, or a class. Every share widens the circle.">Share this page</button>
+<button type="button" aria-pressed="false" data-m="Look up your campus counseling center and bookmark it, for you or for someone else.">Find campus resources</button>
+<button type="button" aria-pressed="false" data-m="Practice the words: “Are you thinking about suicide?” Say them aloud once so they come easier.">Practice the question</button>
+</div>
+<p id="pmsg" role="status" aria-live="polite"></p>
+<div class="share" id="sharecard"><p class="sq">Leave a light on.</p><p>Ask. Listen. Stay.<br>Call or text 988 any time.</p></div>
+<p><button type="button" id="copycap">Copy caption</button><button type="button" id="shareit" hidden>Share…</button></p>
+<p id="cmsg" role="status" aria-live="polite"></p>
+<p class="lede">You don’t have to be a hero. Just leave a light on.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<p><b>Leave a Light On</b> is a student public advocacy project created for a communication course. It offers general awareness information and is not a substitute for professional care. Resources and statistics are drawn from the CDC, NIMH, and the 988 Lifeline; verify current details on their official sites.</p>
+<p>If you are in crisis, call or text <a href="tel:988">988</a>.</p>
+</div></footer>
+
+<script>
+(function(){
+var msg=document.getElementById("pmsg");
+document.querySelectorAll("#pbtns button").forEach(function(b){
+b.addEventListener("click",function(){
+var on=b.getAttribute("aria-pressed")!=="true";
+b.setAttribute("aria-pressed",on?"true":"false");
+msg.textContent=on?b.getAttribute("data-m"):"";
+});
+});
+var cap="Leave a light on for someone. Ask. Listen. Stay. Call or text 988 any time. ",cm=document.getElementById("cmsg"),sb=document.getElementById("shareit");
+function full(){var u="";try{u=location.href}catch(e){}return cap+u}
+document.getElementById("copycap").addEventListener("click",function(){
+var t=full();
+function fb(){var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand("copy")}catch(e){}document.body.removeChild(a);cm.textContent=ok?"Caption copied. Paste it with a screenshot of the card.":"Copy this: "+t}
+try{navigator.clipboard.writeText(t).then(function(){cm.textContent="Caption copied. Paste it with a screenshot of the card."},fb)}catch(e){fb()}
+});
+if(navigator.share){sb.hidden=false;sb.addEventListener("click",function(){try{navigator.share({title:"Leave a Light On",text:cap,url:location.href}).catch(function(){})}catch(e){}})}
+})();
+</script>
+</body>
+</html>
